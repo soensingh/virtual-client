@@ -1,0 +1,240 @@
+.sectionOneMainContainer {
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(circle at 50% -20%, #310A51 0%, #0E0317 65%, transparent 100%);
+    background-color: 0E0317;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.heroImageContainer {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    overflow: visible;
+}
+
+.heroImageContainer img {
+    width: min(980px, 108%);
+    min-width: 110%;
+    height: auto;
+}
+
+@media (max-width: 1270px) {
+    .heroImageContainer img {
+        width: 100%;
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+}
+
+.heroTextContainer {
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.heroTextContainer span {
+    color: #8A38F5;
+}
+
+.heroSubTextContainer {
+    width: 60%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.heroButtonContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    gap: 20px;
+}
+
+@media (max-height: 700px) {
+    .heroButtonContainer {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.heroButtonContainer button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #8A38F5;
+    font-family: "Open Sans", sans-serif;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: #6025ad;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.heroButtonContainer button:nth-child(2) {
+    background-color: transparent;
+    padding: 10px 50px;
+}
+
+.heroButtonContainer button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(138, 56, 245, 0.35);
+}
+
+.heroButtonContainer button:nth-child(2):hover {
+    background-color: #8A38F5;
+    color: white;
+}
+
+@media (max-width: 1287px) {
+    .heroButtonContainer {
+        width: auto;
+    }
+
+
+    .heroImageContainer img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .heroTextContainer {
+        width: 70%;
+        font-size: 44px;
+    }
+
+    .heroSubTextContainer {
+        width: 75%;
+        font-size: 18px;
+    }
+
+    .heroButtonContainer {
+        width: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    .sectionOneMainContainer {
+        height: 80vh;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sectionOneMainContainer{
+        height: 70vh;
+    }
+    .heroImageContainer {
+        margin-top: 12vh;
+         height: auto !important;
+         width: 100%;
+    }
+
+    .heroTextContainer {
+        width: 80%;
+        font-size: 38px;
+    }
+
+    .heroSubTextContainer {
+        width: 80%;
+        font-size: 17px;
+    }
+
+    .heroButtonContainer {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionOneMainContainer {
+        padding: 0 20px;
+         height: 60vh;
+    }
+
+    .heroImageContainer {
+        margin-top: 10vh;
+    }
+
+    .heroImageContainer img {
+        width: 100vw;
+        max-width: 80vw;
+        height: auto;
+    }
+
+    .heroTextContainer {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .heroSubTextContainer {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .heroButtonContainer {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .heroButtonContainer button {
+        width: 80%;
+    }
+
+    .heroButtonContainer button:nth-child(2) {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 510px) {
+    .sectionOneMainContainer{
+            height: 66vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionOneMainContainer{
+        height: 500px;
+    }
+    .heroImageContainer {
+        margin-top: 9vh;
+         height: 15vh !important;
+    }
+
+    .heroTextContainer {
+        font-size: 26px;
+    }
+
+    .heroSubTextContainer {
+        font-size: 14px;
+    }
+
+    .heroButtonContainer button {
+        width: 100%;
+    }
+}
+
+@media(max-height: 766px) {
+    .sectionOneMainContainer {
+        height: auto;
+        padding: 10px 20px 7px;
+    }
+}

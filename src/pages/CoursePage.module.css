@@ -1,0 +1,902 @@
+.pageContainer {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+}
+
+@keyframes courseFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #2d1b4e 100%);
+  padding: 80px 20px 40px;
+  text-align: center;
+  position: relative;
+  animation: courseFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: rgba(138, 56, 245, 0.2);
+  border: 1px solid #8A38F5;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background: #8A38F5;
+  transform: translateX(-4px);
+}
+
+.pageTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #fff;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+/* Tabs */
+.tabsContainer {
+  background: #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 18px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+.tab:hover {
+  color: #fffb09;
+}
+
+.activeTab {
+  color: #fffb09;
+  border-bottom-color: #8A38F5;
+}
+
+/* Main Content */
+.mainContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  animation: courseFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+
+/* Left Column */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.leftColumn > * {
+  opacity: 0;
+  animation: courseFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.leftColumn > *:nth-child(1) { animation-delay: 0.12s; }
+.leftColumn > *:nth-child(2) { animation-delay: 0.2s; }
+.leftColumn > *:nth-child(3) { animation-delay: 0.28s; }
+.leftColumn > *:nth-child(4) { animation-delay: 0.36s; }
+
+.courseImageWrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.courseImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contentSection {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.sectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+.subSectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 32px 0 16px;
+  color: #fffb09;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlightsList li {
+  padding: 12px 0 12px 32px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.highlightsList li:last-child {
+  border-bottom: none;
+}
+
+.highlightsList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8A38F5;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.syllabusText {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: pre-wrap;
+  font-size: 13px;
+  line-height: 1.8;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  border-radius: 12px;
+  border-left: 3px solid #8A38F5;
+}
+
+.syllabusAccordion {
+  display: grid;
+  gap: 12px;
+}
+
+.weekItem {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.weekTrigger {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.weekTrigger:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(138, 56, 245, 0.55);
+}
+
+.weekTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.weekChevron {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.25s ease;
+}
+
+.weekChevron svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.weekChevronOpen {
+  transform: rotate(180deg);
+}
+
+.weekPanel {
+  display: grid;
+  grid-template-rows: 0fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+
+.weekPanelOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.weekContentWrap {
+  overflow: hidden;
+  padding: 0 18px;
+}
+
+.weekContentText {
+  margin: 14px 0 18px;
+  white-space: pre-wrap;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.pricingCard {
+  background: linear-gradient(165deg, rgba(22, 14, 36, 0.96), rgba(10, 9, 18, 0.96));
+  border: 2px solid rgba(138, 56, 245, 0.9);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(138, 56, 245, 0.2) inset;
+  backdrop-filter: blur(4px);
+}
+
+.pricingCard::before {
+  content: "";
+  position: absolute;
+  top: -42%;
+  left: -16%;
+  width: 48%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(138, 56, 245, 0.14), transparent);
+  transform: rotate(18deg);
+  pointer-events: none;
+}
+
+.pricingHeader h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.pricingHeader p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 14px;
+}
+
+.pricingDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(138, 56, 245, 0.08);
+  border: 1px solid rgba(138, 56, 245, 0.28);
+}
+
+.oldPrice {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: line-through;
+}
+
+.currentPrice {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fffb09;
+  text-shadow: 0 2px 12px rgba(255, 251, 9, 0.18);
+}
+
+.discount {
+  background: rgba(138, 56, 245, 0.28);
+  color: #f1e9ff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.enrollButton {
+  display: none;
+  padding: 12px 34px;
+  background: linear-gradient(135deg, #8A38F5, #0b5cff);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(11, 92, 255, 0.28);
+}
+
+.enrollButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(138, 56, 245, 0.34);
+}
+
+/* Right Sidebar */
+.rightSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightSidebar > * {
+  opacity: 0;
+  animation: courseFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rightSidebar > *:nth-child(1) { animation-delay: 0.2s; }
+.rightSidebar > *:nth-child(2) { animation-delay: 0.28s; }
+.rightSidebar > *:nth-child(3) { animation-delay: 0.36s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .heroSection,
+  .mainContent,
+  .leftColumn > *,
+  .rightSidebar > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.infoCard, .helpCard, .contactFormCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.contactFormCard {
+  position: relative;
+}
+
+.cardTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #fff;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.submittedHeading {
+  filter: blur(8px);
+  opacity: 0.28;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoIcon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(138, 56, 245, 0.1);
+  border-radius: 8px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 4px;
+}
+
+.infoValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+/* Help Card */
+.helpCard {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(138, 56, 245, 0.1), rgba(255, 251, 9, 0.05));
+  border: 2px solid #8A38F5;
+}
+
+.helpIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.helpTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.phoneNumber {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fffb09;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.chatButton {
+  display: inline-block;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.chatButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Contact Form */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Contact Form */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.submittedForm {
+  filter: blur(8px);
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.formGroup, .inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.groupLabel, .inputLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.experienceToggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.experienceOption {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.experienceOption:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.experienceOption:hover {
+  background: rgba(138, 56, 245, 0.15);
+  color: #ffffff;
+}
+
+.experienceOptionActive {
+  background: rgba(138, 56, 245, 0.35);
+  color: #ffffff;
+}
+
+.textInput {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.textInput:focus {
+  border-color: #8A38F5;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lockedInput {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: not-allowed;
+}
+
+.disclaimer {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin: 0;
+}
+
+.formInput, .formTextarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus, .formTextarea:focus {
+  outline: none;
+  border-color: #8A38F5;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.formInput::placeholder, .formTextarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.submitButton {
+  padding: 14px;
+  background: #8A38F5;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #7a2bd9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(138, 56, 245, 0.4);
+}
+
+.submitButton:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.submitSuccessOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.submitSuccessIcon {
+  font-size: 62px;
+  color: #16c05f;
+  filter: drop-shadow(0 0 14px rgba(22, 192, 95, 0.45));
+  animation: successTickPop 0.5s ease-out both;
+}
+
+.submitSuccessNote {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #a7f3c0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.submitSuccessNoteIcon {
+  color: #16c05f;
+  font-size: 14px;
+}
+
+@keyframes successTickPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.55) rotate(-8deg);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.08) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Error Container */
+.errorContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  gap: 20px;
+}
+
+.errorContainer .backButton {
+  position: static;
+  background: #8A38F5;
+  border: none;
+  padding: 12px 24px;
+  transform: none;
+}
+
+.errorContainer .backButton:hover {
+  background: #7a2bd9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .enrollButton {
+    display: inline-block;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .rightSidebar {
+    order: -1;
+  }
+  
+  .pageTitle {
+    font-size: 32px;
+  }
+  
+  .tabs {
+    overflow-x: auto;
+  }
+  
+  .tab {
+    padding: 16px 24px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 70px 16px 24px;
+  }
+
+  .backButton {
+    position: static;
+    margin: 0 auto 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+  .mainContent {
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .leftColumn {
+    order: 1;
+  }
+
+  .rightSidebar {
+    order: 2;
+  }
+
+  .contentSection {
+    padding: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .subSectionTitle {
+    font-size: 18px;
+  }
+
+  .pricingDetails {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .currentPrice {
+    font-size: 28px;
+  }
+
+  .oldPrice {
+    font-size: 16px;
+  }
+
+  .rightSidebar {
+    gap: 16px;
+  }
+
+  .helpCard {
+    display: none;
+  }
+
+  .infoCard, .helpCard, .contactFormCard {
+    padding: 18px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .infoItem {
+    padding: 12px 0;
+  }
+
+  .helpIcon {
+    font-size: 36px;
+  }
+
+  .phoneNumber {
+    font-size: 18px;
+  }
+
+  .contactForm {
+    gap: 12px;
+  }
+
+  .textInput,
+  .lockedInput {
+    padding: 10px 12px;
+  }
+
+  .submitButton {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .heroSection {
+    padding: 64px 12px 20px;
+  }
+
+  .backButton {
+    width: 100%;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+
+  .pricingCard {
+    padding: 16px;
+  }
+
+  .pricingDetails {
+    flex-direction: column;
+  }
+
+  .enrollButton {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,293 @@
+.footerMainContainer {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 60px 40px 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footerNav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 40px;
+}
+
+.footerNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.footerNav ul li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footerNav ul li:hover {
+  color: #8A38F5;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navList li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navList li:hover {
+  color: #8A38F5;
+}
+
+.contactSection {
+  margin-top: 10px;
+}
+
+.footerHeading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerColumn ul li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footerColumn ul li:hover {
+  color: #8A38F5;
+}
+
+.courseLink {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.courseLink:hover {
+  color: #8A38F5;
+}
+
+.contactSection p {
+  font-size: 14px;
+  color: #333333;
+  margin: 8px 0;
+}
+
+.comingSoon {
+  color: #8A38F5 !important;
+  font-style: italic;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.socialIcons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.socialIcons img:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+  }
+
+  .coursesColumn,
+  .whyAcademyColumn {
+    display: none;
+  }
+}
+
+.registeredOffice {
+  margin-top: 30px;
+}
+
+.registeredOffice p {
+  font-size: 12px;
+  color: #333333;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.robotImage {
+  width: 180px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.footerBottom {
+  max-width: 1400px;
+  width: 100%;
+  margin: 30px auto 0px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.copyrightText {
+  font-size: 12px;
+  color: #666666;
+  margin: 0;
+}
+
+.trustedSection h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.trustedSection {
+  text-align: center;
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.studentProfiles {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.footerLinks a {
+  font-size: 14px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+  color: #8A38F5;
+}
+
+@media (max-width: 1200px) {
+  .footerContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .footerNav ul {
+    gap: 18px;
+    justify-content: center;
+  }
+
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .comboCourses {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .footerMainContainer {
+    padding: 40px 20px 20px;
+  }
+
+  .footerNav ul {
+    justify-content: center;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+  }
+}

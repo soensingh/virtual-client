@@ -1,0 +1,218 @@
+.reviewSection {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 5%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(90deg, #8A38F5, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reviewsContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  touch-action: pan-x pan-y;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.reviewsContainer::-webkit-scrollbar {
+  height: 0;
+}
+
+.reviewsTrack {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+
+.reviewsPage {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 0 2px;
+  scroll-snap-align: start;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  width: 100%;
+}
+
+.reviewCard {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 250px; /* Fixed height for consistency */
+}
+
+.reviewCard:hover {
+  transform: translateY(-5px);
+  border-color: #8A38F5; /* Theme purple */
+  box-shadow: 0 0 18px rgba(138, 56, 245, 0.35);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.avatarWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  border: 2px solid #8A38F5;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.userName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userRole {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin: 2px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardBody {
+  flex: 1;
+  overflow: hidden;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+  margin: 2px 0 10px 0;
+}
+
+.starFilled {
+  color: #FFD33D;
+  text-shadow: 0 0 14px rgba(255, 211, 61, 0.75);
+  font-size: 20px;
+}
+
+.starEmpty {
+  color: rgba(255, 211, 61, 0.25);
+  font-size: 20px;
+}
+
+.reviewText {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: left;
+  margin: 0;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4; /* Show about 4 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #555;
+}
+
+.activeDot {
+  background-color: #8A38F5;
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .reviewsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .reviewSection {
+      padding: 60px 20px;
+  }
+  
+  .heading {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 655px) {
+  .reviewSection{
+      padding: 0px 15px 20px;
+  }
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+

@@ -1,0 +1,319 @@
+.aboutSection {
+  height: 100vh;
+  width:100%;
+  background-color: #070010;
+  padding: 15vh 20px 60px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-height: 700px) {
+  .aboutSection {
+    padding-top: 18vh;
+  }
+}
+
+@media (max-height: 600px) {
+  .aboutSection {
+    padding-top: 20vh;
+  }
+}
+
+.aboutSection::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+.aboutHeading {
+  width: 190px;
+  height: 59px;
+  margin: 0 auto 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+.us {
+  font-size: 48px;
+  color: #8A38F5;
+;
+}
+
+
+.aboutDescription {
+  max-width: 886px;
+  margin: 0 auto 28px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+  color: #8A38F5;
+
+}
+.bold1{
+  font-weight: 700;
+  color: #652D92;
+
+}
+
+
+.light {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.by {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+
+.aboutSplit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: none;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  flex: 1;
+  align-items: stretch;
+  padding: 10px 6vw 0;
+}
+
+.mapPane {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+.mapImage {
+  width: min(520px, 90%);
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(138, 56, 245, 0.25));
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.textPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 24px;
+  padding: 0;
+padding-left: 70px;
+}
+
+.videoPane {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.aboutVideo {
+  width: min(560px, 100%);
+  height: 240px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 0 18px rgba(138, 56, 245, 0.25);
+}
+
+.aboutVideoBottom {
+  margin-top: auto;
+}
+
+.toggleRow {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.toggleBtn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(138, 56, 245, 0.35);
+  background: rgba(138, 56, 245, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.toggleActive {
+  background: rgba(138, 56, 245, 0.22);
+  color: #ffffff;
+  border-color: rgba(138, 56, 245, 0.75);
+}
+
+.missionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(26px, 2.4vw, 36px);
+  font-weight: 700;
+  color: #8A38F5;
+  margin-bottom: 10px;
+}
+
+.missionText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 560px;
+}
+
+.missionBlock {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1201px) {
+  .aboutSection {
+    padding: 0vh 20px 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  
+  .aboutSplit {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    height: auto;
+    min-height: auto;
+    padding: 12vh 20px 40px;
+  }
+
+  /* .aboutDescription{
+    margin-bottom: 0px;
+  } */
+
+  .aboutSplit{
+    gap: 0px;
+    flex: 0;
+    margin-top: 10px;
+  }
+
+  .aboutHeading {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .aboutDescription {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .missionTitle{
+    margin-bottom: 5px;
+  }
+
+  .textPane{
+    gap: 0px;
+  }
+  
+
+  .us {
+    font-size: 40px;
+  }
+
+  .aboutSplit {
+    flex-direction: column;
+  }
+
+  .videoPane {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .aboutVideo {
+    width: 100%;
+    height: 200px;
+  }
+
+  .aboutVideoBottom {
+    display: none;
+  }
+
+  .mapPane {
+    min-height: 360px;
+  }
+
+  .textPane {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .missionText {
+    max-width: 90%;
+  }
+  .videoPane {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 4vh 14px 40px;
+  }
+  .aboutHeading {
+    font-size: 28px;
+  }
+
+  .us {
+    font-size: 34px;
+  }
+
+  .aboutDescription {
+    font-size: 16px;
+  }
+
+  .missionTitle {
+    font-size: 24px;
+  }
+
+  .missionText {
+    font-size: 15px;
+    max-width: 100%;
+  }
+}

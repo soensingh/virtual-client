@@ -1,0 +1,39 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+#info {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #fff;
+  z-index: 2;
+  line-height: 1.4;
+}
+
+#info a {
+  color: #8A38F5;
+  text-decoration: none;
+}
+
+#info .title-wrapper {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+#info small {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+canvas {
+  display: block;
+}

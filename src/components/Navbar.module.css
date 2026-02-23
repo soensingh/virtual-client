@@ -1,0 +1,315 @@
+.navbarMainContainer {
+    height: 8.9vh;
+    width: 100%;
+    background-color: transparent;
+    padding: 5px 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    will-change: background-color, backdrop-filter, border-color;
+    transform: translateZ(0);
+}
+
+.poppinsRegular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.openSans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.navbarLogoContainer {
+    height: 100%;
+    width: 14%;
+    overflow: visible;
+    transition: overflow 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.logoImage {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+    transform: translateY(-50%);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.mainLogoImage {
+    transform: translateY(-50%) scale(1);
+}
+
+.afterLogoImage {
+    transform: translateY(-50%) scale(0.72);
+}
+
+.logoVisible {
+    opacity: 1;
+}
+
+.logoHidden {
+    opacity: 0;
+}
+
+.logoScrolled {
+    overflow: hidden;
+}
+
+.logoScrolled .mainLogoImage {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.logoScrolled .afterLogoImage {
+    transform: translateY(-50%) scale(0.72);
+}
+
+.navbarMenuContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-left: auto;
+    margin-right: 15%;
+    z-index: 1001;
+}
+
+.navbarMenuContainer a{
+        color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbarMenuContainer a.navActive {
+    color: #8A38F5;
+    text-shadow: 0 0 12px rgba(138, 56, 245, 0.5);
+}
+
+.navbarEnquireContainer {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.navbarActions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: auto;
+}
+
+.navbarSearchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuToggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menuBackdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(18px);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.menuBackdropOpen {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menuToggle span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 999px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbarEnquireContainer button {
+    background-color: transparent;
+    color: white;
+    border: #8A38F5 2px solid;
+    padding: 7px 25px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbarEnquireContainer button:hover {
+    background-color: #8A38F5;
+    color: white;
+    border-color: #8A38F5;
+    outline: none;
+    box-shadow: 0 8px 20px rgba(138, 56, 245, 0.35);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1550px) {
+    .navbarMainContainer {
+        padding: 5px 100px;
+    }   
+    .navbarMenuContainer {
+        width:64%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .navbarMenuContainer {
+        gap: 18px;
+    }
+
+    .navbarMenuContainer a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbarMainContainer {
+        padding: 5px 60px;
+    }
+
+    .navbarMenuContainer {
+        width: 60%;
+        margin-right: 6%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .navbarMenuContainer a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbarMainContainer {
+        padding: 5px 40px;
+    }
+
+    .navbarLogoContainer {
+        width: 18%;
+    }
+
+    .navbarMenuContainer {
+        width: 58%;
+        margin-right: 4%;
+    }
+
+    .navbarMenuContainer a {
+        font-size: 14px;
+    }
+
+    .navbarEnquireContainer button {
+        padding: 6px 18px;
+    }
+}
+
+@media (max-width: 1010px) {
+    .navbarMainContainer {
+        padding: 10px 24px;
+        height: auto;
+    }
+
+    .navbarLogoContainer {
+        width: 28%;
+        height: 36px;
+    }
+
+    .navbarMenuContainer {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 22px;
+        padding: 110px 32px 40px;
+        border-radius: 0;
+        background: rgba(14, 3, 23, 0.88);
+        border: none;
+        box-shadow: none;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+        z-index: 1002;
+    }
+
+    .navbarMenuOpen {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .navbarMenuContainer a {
+        font-size: 24px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbarEnquireContainer {
+        margin: 0;
+    }
+
+    .menuToggle {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbarMainContainer {
+        padding: 10px 16px;
+    }
+
+    .navbarLogoContainer {
+        width: 36%;
+    }
+
+    .navbarEnquireContainer button {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
+
